@@ -1,3 +1,12 @@
+:root {
+  --font-1: 'play', sans-serif;
+  --font-2: 'inter', sans-serif;
+  --color-1: #871da1;
+  --color-2: #9849ad;
+  --color-3: #6d0e84;
+  --color-4: #fff;
+}
+
 @font-face {
   font-family: 'play';
   font-weight: 700;
@@ -22,33 +31,113 @@
   src: url('../fonts/inter-regular.woff') format("woff");
 }
 
-.test {
-  margin: 80px 0;
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.test p {
-  margin: 0 0 20px;
+.title-2 {
+  font-family: var(--font-1);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 1.2px;
+  color: var(--color-4);
 }
 
-.play-700 {
-  font-family: 'play', sans-serif;
-  font-size: 64px;
+.text-1 {
+  margin: 0;
+  font-family: var(--font-2);
+  font-size: 16px;
   font-weight: 400;
+  line-height: 22.2px;
+  color: var(--color-4);
 }
 
-.inter {
-  font-family: 'inter', sans-serif;
-  font-size: 20px;
-}
-
-.inter-600 {
+.button-1 {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: var(--font-2);
+  font-size: 16px;
   font-weight: 600;
+  line-height: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: ease 100ms;
+  outline: none;
 }
 
-.inter-500 {
-  font-weight: 500;
+.button-1--a {
+  color: var(--color-1);
+  background: var(--color-4);
 }
 
-.inter-400 {
+.button-1--a:hover,
+.button-1--a:focus {
+  color: var(--color-4);
+  background: var(--color-2);
+}
+
+.button-1--a:active {
+  color: var(--color-4);
+  background: var(--color-3);
+}
+
+/* advantages */
+
+.advantages {
+  padding: 48px 0 56px;
+  background: var(--color-1);
+}
+
+.advantages__wrapper {
+  display: flex;
+  align-items: end;
+  gap: 10%;
+}
+
+.advantages__wrapper-1 {
+  width: 41%;
+}
+
+.advantages__title-2 {
+  margin: 0 0 24px;
+}
+
+.advantages__advantages-list {
+  width: 49%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 22px;
+  margin: 0 0 -5px;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__advantage-num {
+  font-family: var(--font-1);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 55.5px;
+  color: var(--color-4);
+}
+
+.advantages__advantage-text {
+  margin: 0;
+  font-family: var(--font-2);
+  font-size: 20px;
   font-weight: 400;
+  line-height: 37px;
+  color: var(--color-4);
+}
+
+.advantages__advantage:nth-child(2),
+.advantages__advantage:nth-child(4) {
+  padding: 0 0 0 10px;
+}
+
+.advantages__button-1 {
+  margin: 30px 0 0;
 }
