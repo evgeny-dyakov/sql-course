@@ -5,7 +5,7 @@
   --color-2: #9849ad;
   --color-3: #6d0e84;
   --color-4: #fff;
-  --color-5: #000;
+  --color-5: #141414;
   --header-height-desktop: 72px;
 }
 
@@ -191,7 +191,7 @@
   padding: 10px 0 0;
   height: var(--header-height-desktop);
   color: var(--color-4);
-  background: rgba(0, 0, 0, .9);
+  background: rgba(20, 20, 20, .8);
   border-bottom: 1px dashed lightgray;
 }
 
@@ -199,6 +199,7 @@
 
 .main {
   margin: calc(var(--header-height-desktop) * -1) 0 0;
+  overflow: hidden;
 }
 
 /* intro */
@@ -206,6 +207,34 @@
 .intro {
   padding: 200px 0 216px;
   background: var(--color-5);
+}
+
+.intro__container {
+  position: relative;
+  z-index: 10;
+}
+
+.intro__container::before,
+.intro__container::after {
+  content: '';
+  position: absolute;
+  z-index: -20;
+}
+
+.intro__container::before {
+  top: -210px;
+  left: -630px;
+  width: 1400px;
+  height: 1400px;
+  background: url('../img/gradient-purple.png') no-repeat center/cover;
+}
+
+.intro__container::after {
+  top: -680px;
+  right: -320px;
+  width: 1100px;
+  height: 1100px;
+  background: url('../img/gradient-blue.png') no-repeat center/cover;
 }
 
 .intro__title-1 {
@@ -244,9 +273,52 @@
   margin: 17px 0 0;
 }
 
+.intro__animations {
+  position: absolute;
+  top: -18%;
+  right: 40px;
+  display: none;
+  flex-direction: column;
+  width: 39%;
+  z-index: -10;
+}
+
+.intro__animation {
+  position: relative;
+  width: 100%;
+  padding: 60% 0 0;
+  overflow: hidden;
+}
+
+.intro__animation img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(0, -50%);
+}
+
+.intro__grid {
+  position: absolute;
+  top: -203px;
+  right: 40.5%;
+  z-index: -30;
+  width: 840px;
+  height: 815px;
+  background: url('../img/grid.svg') no-repeat center/cover;
+}
+
 @media(max-width: 820px) {
   .intro {
     padding: 168px 0 92px;
+  }
+
+  .intro__container::before {
+    left: -670px;
+  }
+
+  .intro__container::after {
+    right: -500px;
   }
 
   .intro__title-1 {
@@ -262,11 +334,25 @@
     max-width: 450px;
     margin: 0 0 32px;
   }
+
+  .intro__animations {
+    top: -10%;
+    right: 32px;
+    width: 42%;
+  }
 }
 
 @media(max-width: 440px) {
   .intro {
     padding: 127px 0 218px;
+  }
+
+  .intro__container::before {
+    left: -780px;
+  }
+
+  .intro__container::after {
+    right: -590px;
   }
 
   .intro__title-1 {
@@ -284,6 +370,19 @@
     margin: 0 0 26px;
     font-size: 12px;
   }
+
+  .intro__animations {
+    top: auto;
+    bottom: -57%;
+    width: 53%;
+  }
+
+  .intro__grid {
+    top: -55px;
+    right: 22.5%;
+    width: 566px;
+    height: 549px;
+  }
 }
 
 /* whom */
@@ -292,6 +391,11 @@
   font-family: var(--font-2);
   color: var(--color-4);
   background: var(--color-5);
+}
+
+.whom__container {
+  position: relative;
+  z-index: 10;
 }
 
 .whom__title-2 {
