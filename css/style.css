@@ -33,14 +33,45 @@
   src: url('../fonts/inter-regular.woff') format("woff");
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .body {
   min-width: 375px;
+  margin: 0;
 }
 
 .container {
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.logo {
+  display: block;
+  width: 190px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
 }
 
 .title-1 {
@@ -124,6 +155,37 @@
   background: var(--color-3);
 }
 
+.button-1--b {
+  color: var(--color-4);
+  box-shadow: inset 0 0 0 2px var(--color-4);
+}
+
+.button-1--b:hover,
+.button-1--b:focus {
+  color: var(--color-1);
+  background: var(--color-4);
+  box-shadow: none;
+}
+
+.button-1--b:active {
+  color: var(--color-4);
+  background: var(--color-3);
+}
+
+.button-1--c {
+  color: var(--color-4);
+  background: var(--color-1);
+}
+
+.button-1--c:hover,
+.button-1--c:focus {
+  background: var(--color-2);
+}
+
+.button-1--c:active {
+  background: var(--color-3);
+}
+
 .social-button {
   display: flex;
   justify-content: center;
@@ -131,19 +193,28 @@
   width: 40px;
   height: 40px;
   text-decoration: none;
-  background: rgba(255, 255, 255, .15);
-  border-radius: 8px;
   transition: ease 100ms;
   outline: none;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-button--1 {
+  background: rgba(255, 255, 255, .15);
+  border-radius: 8px;
+}
+
+.social-button--1:hover,
+.social-button--1:focus {
   background: rgba(255, 255, 255, .2);
 }
 
-.social-button:active {
+.social-button--1:active {
   background: rgba(255, 255, 255, .5);
+}
+
+.social-button--2:hover path,
+.social-button--2:focus path {
+  transition: ease 100ms;
+  fill: var(--color-1);
 }
 
 @media(max-width: 820px) {
@@ -564,6 +635,7 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  border: none;
 }
 
 @media(max-width: 820px) {
@@ -725,8 +797,146 @@
 /* footer */
 
 .footer {
-  padding: 10px 0 0;
-  height: var(--header-height-desktop);
+  padding: 48px 0 29px;
   color: var(--color-4);
   background: var(--color-5);
+}
+
+.footer__wrapper-1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 120px;
+}
+
+.footer__title-2 {
+  width: 400px;
+}
+
+.footer__wrapper-2 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__wrapper-2 a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__wrapper-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__wrapper-4 {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  margin: 0 126px 0 0;
+}
+
+.footer__questions {
+  margin: 0;
+  font-family: var(--font-2);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-4);
+}
+
+.footer__questions a {
+  color: var(--color-4);
+  text-decoration: none;
+  transition: 100ms ease;
+  outline: none;
+}
+
+.footer__questions a:hover,
+.footer__questions a:focus {
+  color: var(--color-1);
+}
+
+.footer__social {
+  display: flex;
+  gap: 14px;
+  margin: 0 -5px 0 0;
+}
+
+@media(max-width: 820px) {
+  .footer__wrapper-1 {
+    display: block;
+    margin: 0 0 80px;
+  }
+
+  .footer__title-2 {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+
+  .footer__wrapper-2 {
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .footer__wrapper-2 a {
+    width: 50%;
+  }
+
+  .footer__logo {
+    margin: 0 56px 0 0;
+  }
+
+  .footer__questions {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 640px) {
+
+  .footer__title-2 {
+    margin: 0 0 32px;
+  }
+
+  .footer__wrapper-2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer__wrapper-2 a {
+    width: 100%;
+  }
+}
+
+@media(max-width: 560px) {
+  .footer {
+    padding: 48px 0 37px;
+  }
+
+  .footer__wrapper-1 {
+    margin: 0 0 56px;
+  }
+
+  .footer__wrapper-4 {
+    display: block;
+  }
+
+  .footer__wrapper-3 {
+    align-items: flex-end;
+  }
+
+  .footer__social {
+    gap: 6px;
+    margin: 0 -5px -11px 0;
+  }
+
+  .footer__logo {
+    margin: 0 0 23px;
+  }
+
+  .footer__questions {
+    font-size: 14px;
+  }
 }
