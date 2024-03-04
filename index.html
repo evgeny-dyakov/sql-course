@@ -11,7 +11,39 @@
 <body class="body">
 
   <header class="header">
-    <div class="container">header</div>
+    <div class="container header__container">
+      <div class="logo header__logo">
+        <img src="./img/logo-dark.svg" alt="logo" tabindex="0">
+      </div>
+      <button class="header__burger"></button>
+
+      <div class="header__menu">
+        <div class="header__wrapper">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item" data-nav="about" tabindex="0">О курсе</li>
+              <li class="header__nav-item" data-nav="program" tabindex="0">Программа</li>
+              <li class="header__nav-item" data-nav="tariffs" tabindex="0">Тарифы</li>
+            </ul>
+          </nav>
+          <div class="social-links header__social-links">
+            <a class="social-link social-link--1" href="https://www.youtube.com/@datanotes_ru" target="_blank">
+              <span class="visually-hidden">youtube</span>
+              <img src="./img/youtube.svg" alt="youtube-icon">
+            </a>
+            <a class="social-link social-link--1" href="https://t.me/datanotes_ru" target="_blank">
+              <span class="visually-hidden">telegram</span>
+              <img src="./img/telegram.svg" alt="telegram-icon">
+            </a>
+          </div>
+          <a class="button-2 button-2--a header__start-study" href="#">Начать обучение</a>
+          <p class="header__questions">Остались вопросы?<br> <a href="#">Напиши</a></p>
+        </div>
+      </div>
+
+      <a class="button-2 button-2--b header__login" href="#" hidden>Войти</a>
+    </div>
+    <div class="header__overlay header__overlay--none header__overlay--transparent"></div>
   </header>
 
   <main class="main">
@@ -21,12 +53,12 @@
         <h1 class="title-1 intro__title-1">Авторский курс по <span>SQL</span></h1>
         <p class="text-1 intro__text-1">На курсе вы освоите составление продвинутых <span>SQL-запросов</span> для различных задач, а уроки с понятной анимацией помогут легко запомнить темы. Приятным бонусом будет возможность задавать вопросы автору на онлайн-встречах.</p>
         <a class="button-2 button-2--a" href="#">Начать обучение</a>
-        <div class="intro__social">
-          <a class="social-button social-button--1" href="https://www.youtube.com/@datanotes_ru" target="_blank">
+        <div class="social-links intro__social-links">
+          <a class="social-link social-link--1" href="https://www.youtube.com/@datanotes_ru" target="_blank">
             <span class="visually-hidden">youtube</span>
             <img src="./img/youtube.svg" alt="youtube-icon">
           </a>
-          <a class="social-button social-button--1" href="https://t.me/datanotes_ru" target="_blank">
+          <a class="social-link social-link--1" href="https://t.me/datanotes_ru" target="_blank">
             <span class="visually-hidden">telegram</span>
             <img src="./img/telegram.svg" alt="telegram-icon">
           </a>
@@ -43,27 +75,27 @@
       </div>
     </section>
 
-    <section class="whom">
-      <div class="container whom__container">
-        <h2 class="title-2 whom__title-2">Кому подойдет курс</h2>
-        <ul class="whom__list">
-          <li class="whom__item">
-            <h3 class="title-3 whom__title-3">Новичок</h3>
-            <p class="whom__item-text-1">Идеальный старт для тех, кто только начинает свой путь в мире баз данных!</p>
-            <p class="whom__item-text-2">Здесь ты освоишь основы SQL и научишься составлять запросы, даже если у тебя нет опыта</p>
-            <img class="whom__item-img" src="./img/students.svg" alt="students-img">
+    <section class="for">
+      <div class="container for__container">
+        <h2 class="title-2 for__title-2">Кому подойдет курс</h2>
+        <ul class="for__list">
+          <li class="for__item">
+            <h3 class="title-3 for__title-3">Новичок</h3>
+            <p class="for__item-text-1">Идеальный старт для тех, кто только начинает свой путь в мире баз данных!</p>
+            <p class="for__item-text-2">Здесь ты освоишь основы SQL и научишься составлять запросы, даже если у тебя нет опыта</p>
+            <img class="for__item-img" src="./img/students.svg" alt="students-img">
           </li>
-          <li class="whom__item">
-            <h3 class="title-3 whom__title-3">Data-специалист</h3>
-            <p class="whom__item-text-1">Отличная возможность для аналитиков data science и data engineer углубить свои знания в SQL</p>
-            <p class="whom__item-text-2">Научись создавать сложные запросы и оптимизировать работу с данными</p>
-            <img class="whom__item-img" src="./img/data.svg" alt="data-img">
+          <li class="for__item">
+            <h3 class="title-3 for__title-3">Data-специалист</h3>
+            <p class="for__item-text-1">Отличная возможность для аналитиков data science и data engineer углубить свои знания в SQL</p>
+            <p class="for__item-text-2">Научись создавать сложные запросы и оптимизировать работу с данными</p>
+            <img class="for__item-img" src="./img/data.svg" alt="data-img">
           </li>
-          <li class="whom__item">
-            <h3 class="title-3 whom__title-3">Разработчик</h3>
-            <p class="whom__item-text-1">Твой шанс разобраться в том, что происходит под капотом ORM и перестать бояться нативных запросов</p>
-            <p class="whom__item-text-2">Погружение в SQL позволит тебе контролировать запросы и оптимизировать производительность твоих приложений</p>
-            <img class="whom__item-img" src="./img/dev.svg" alt="dev-img">
+          <li class="for__item">
+            <h3 class="title-3 for__title-3">Разработчик</h3>
+            <p class="for__item-text-1">Твой шанс разобраться в том, что происходит под капотом ORM и перестать бояться нативных запросов</p>
+            <p class="for__item-text-2">Погружение в SQL позволит тебе контролировать запросы и оптимизировать производительность твоих приложений</p>
+            <img class="for__item-img" src="./img/dev.svg" alt="dev-img">
           </li>
         </ul>
       </div>
@@ -108,28 +140,35 @@
       </div>
     </section>
 
-    <section class="education-form">
-      <div class="education-form__container container">
-        <h2 class="title-2 education-form__title-2">Форма обучения</h2>
-          <div class="education-form__wrapper-1">
-            <div class="education-form__card education-form__card--group">
-              <h3 class="education-form__title-3 title-3">Обучение в группе</h3>
-              <p class="education-form__text-1 text-1">Групповое обучение - это прекрасный способ получить новые знания и умения в комфортной и дружелюбной атмосфере. </p>
-              <strong class="education-form__price">12 000 ₽</strong>
-              <ul class="education-form__list">
+    <section class="program" >
+      <div class="container">
+        <h2 class="title-2">Программа курса</h2>
+
+      </div>
+    </section>
+
+    <section class="tariffs">
+      <div class="container tariffs__container">
+        <h2 class="title-2 tariffs__title-2">Форма обучения</h2>
+          <div class="tariffs__wrapper-1">
+            <div class="tariffs__card tariffs__card--group">
+              <h3 class="title-3 tariffs__title-3">Обучение в группе</h3>
+              <p class="text-1 tariffs__text-1">Групповое обучение - это прекрасный способ получить новые знания и умения в комфортной и дружелюбной атмосфере. </p>
+              <strong class="tariffs__price">12 000 ₽</strong>
+              <ul class="tariffs__list">
                 <li class="text-1 text-1--a">40 видеоуроков с приятной и понятной анимацией</li>
                 <li class="text-1 text-1--a">Тестовые задания и проверка знаний</li>
                 <li class="text-1 text-1--a">Доступная база знаний по теме SQL</li>
                 <li class="text-1 text-1--a">5 групповых вебинаров с автором курса</li>
                 <li class="text-1 text-1--a">Доступ в закрытую группу в Telegram</li>
               </ul>
-              <a class="education-form__button-1 button-1 button-1--b" href="#">Хочу учиться в группе</a>
+              <a class="button-1 button-1--b tariffs__button-1" href="#">Хочу учиться в группе</a>
             </div>
-            <div class="education-form__card education-form__card--solo">
-              <h3 class="education-form__title-3 title-3">Индивидуальное обучение</h3>
-              <p class="education-form__text-1 text-1">Учеба в удобном для вас темпе! Разберите сложные темы на индивидуальных встречах с ментором, задавайте вопросы и разбирайте личные профессиональные кейсы.</p>
-              <strong class="education-form__price">24 000 ₽</strong>
-              <ul class="education-form__list">
+            <div class="tariffs__card tariffs__card--solo">
+              <h3 class="title-3 tariffs__title-3">Индивидуальное обучение</h3>
+              <p class="text-1 tariffs__text-1">Учеба в удобном для вас темпе! Разберите сложные темы на индивидуальных встречах с ментором, задавайте вопросы и разбирайте личные профессиональные кейсы.</p>
+              <strong class="tariffs__price">24 000 ₽</strong>
+              <ul class="tariffs__list">
                 <li class="text-1 text-1--a">40 видеоуроков с приятной и понятной анимацией</li>
                 <li class="text-1 text-1--a">Тестовые задания и проверка знаний</li>
                 <li class="text-1 text-1--a">Доступная база знаний по теме SQL</li>
@@ -137,7 +176,7 @@
                 <li class="text-1 text-1--a">Доступ в закрытую группу в Telegram</li>
                 <li class="text-1 text-1--a">Индивидуальные занятия с автором курса</li>
               </ul>
-              <a class="education-form__button-1 button-1 button-1--a" href="#">Хочу учиться с ментором</a>
+              <a class="button-1 button-1--a tariffs__button-1" href="#">Хочу учиться с ментором</a>
             </div>
           </div>
       </div>
@@ -156,17 +195,17 @@
       </div>
       <div class="footer__wrapper-3">
         <div class="footer__wrapper-4">
-          <a class="logo footer__logo">
+          <div class="logo footer__logo">
             <img src="./img/logo-dark.svg" alt="logo">
-          </a>
+          </div>
           <p class="footer__questions">Остались вопросы? <a href="#">Напиши</a></p>
         </div>
-        <div class="footer__social">
-          <a class="social-button social-button--2" href="https://www.youtube.com/@datanotes_ru" target="_blank">
+        <div class="social-links footer__social-links">
+          <a class="social-link social-link--2" href="https://www.youtube.com/@datanotes_ru" target="_blank">
             <span class="visually-hidden">youtube</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" fill="none"><path fill="#fff" d="M27.218 3.438C26.96 2.063 25.726 1.062 24.295.75 22.153.312 18.19 0 13.901 0 9.615 0 5.588.313 3.444.75 2.014 1.062.779 2 .52 3.438.26 5 0 7.188 0 10c0 2.813.259 5 .584 6.563.261 1.374 1.494 2.375 2.923 2.688 2.274.436 6.171.749 10.46.749 4.289 0 8.186-.313 10.46-.75 1.429-.312 2.662-1.25 2.923-2.688.26-1.562.584-3.813.65-6.562-.132-2.813-.457-5-.782-6.563ZM11.394 14.374v-8.75L19.32 10l-7.925 4.375Z"/></svg>
           </a>
-          <a class="social-button social-button--2" href="https://t.me/datanotes_ru" target="_blank">
+          <a class="social-link social-link--2" href="https://t.me/datanotes_ru" target="_blank">
             <span class="visually-hidden">telegram</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" fill="none"><path fill="#fff" d="M1.752 9.028c8-3.416 18.354-7.58 19.783-8.155 3.749-1.509 4.9-1.22 4.326 2.12-.412 2.401-1.6 10.35-2.548 15.298-.562 2.933-1.823 3.281-3.806 2.012-.954-.61-5.767-3.7-6.812-4.424-.953-.661-2.268-1.456-.619-3.022.587-.558 4.434-4.122 7.432-6.897.393-.364-.1-.963-.554-.67-4.04 2.6-9.642 6.208-10.355 6.678-1.077.71-2.112 1.035-3.968.517-1.403-.39-2.774-.857-3.307-1.035-2.055-.684-1.567-1.57.428-2.422Z"/></svg>
           </a>
