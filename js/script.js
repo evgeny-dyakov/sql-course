@@ -1,5 +1,8 @@
 'use strict'
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const header = document.querySelector('.header')
 const logo = header.querySelector('.header__logo')
 const nav = header.querySelector('.header__nav')

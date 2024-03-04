@@ -393,7 +393,8 @@ html {
     display: none;
     top: var(--header-height-desktop);
     width: 0px;
-    height: calc(100vh - var(--header-height-desktop));
+    /* height: calc(100vh - var(--header-height-desktop)); */
+    height: calc(var(--vh, 1vh) * 100 - var(--header-height-desktop));
     overflow: hidden;
     z-index: 110;
     background: var(--color-1);
@@ -413,7 +414,8 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: calc(100vh - var(--header-height-desktop));
+    /* height: calc(100vh - var(--header-height-desktop)); */
+    height: calc(var(--vh, 1vh) * 100 - var(--header-height-desktop));
     padding: 55px 0 0 33px;
   }
 
