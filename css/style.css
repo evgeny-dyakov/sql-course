@@ -397,6 +397,7 @@ html {
     overflow: hidden;
     z-index: 110;
     background: var(--color-1);
+    overflow: auto;
   }
 
   .header__menu--block {
